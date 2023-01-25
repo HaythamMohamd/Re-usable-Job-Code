@@ -1,18 +1,18 @@
-version: 2.1
+version: 2.1 # dah el verion
 
-commands:
-  print_pipeline_id:
-    steps:
-      - run: echo ${CIRCLE_WORKFLOW_ID}
+commands: # dah section el commands
+  print_pipeline_id: # dah esam el command 
+    steps: # de el steps
+      - run: echo ${CIRCLE_WORKFLOW_ID} # run this commans to rpint workflowid
 
-jobs:
-  my_job:
-    docker:
-      - image: circleci/node:13.8.0
-    steps:
-      - print_pipeline_id
+jobs: # dah section el jobs
+  my_job: # de awel job with name mu_jib
+    docker: # dah el executer  
+      - image: circleci/node:13.8.0 # de el image ele hayst5'demha el docker
+    steps: # dah section el steps
+      - print_pipeline_id # dah haynfez el command el 3rfnah fo2
 
-workflows:
-  my_workflow:
-    jobs:
-      - my_job
+workflows: # dag section el workflow
+  my_workflow: # dah name of the workflow
+    jobs: # section el jobs
+      - my_job # hynfez awe job
